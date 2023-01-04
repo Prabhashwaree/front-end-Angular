@@ -11,6 +11,7 @@ import { HomeCoreComponent } from './home-core/home-core.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
+import { SliderComponent } from './home-core/compornent/slider/slider.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,6 @@ import {MatMenuModule} from '@angular/material/menu';
     MatInputModule,
     MatMenuModule
   ],
-  declarations: [HomeCoreComponent]
+  declarations: [HomeCoreComponent,SliderComponent]
 })
 export class CoreModule { }

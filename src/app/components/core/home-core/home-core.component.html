@@ -1,32 +1,49 @@
-<mat-toolbar fxLayout="row">
-  <div fxFlex="12%">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <h1 style="color: white;font-size: 38px;margin-top: 17px;margin-left: 30px;">kiki</h1>
-    </button>
-  </div>
-
-  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="17px" fxFlex="73%" class="mainbtnNav">
-    <a class="centerNavBtn" mat-raised-button color="primary"><mat-icon>videocam</mat-icon> Video</a>
-    <a class="centerNavBtn" mat-raised-button color="primary"><mat-icon>audiotrack</mat-icon> Audio</a>
-    <a class="centerNavBtn" mat-raised-button color="primary"><mat-icon>dashboard</mat-icon> More</a>
-
-  </div>
-
-  <div fxLayoutGap="17px" fxLayout="row" fxLayoutAlign="end center" fxFlex="15%">
-    <div style="font-size: 12px">
-      <mat-form-field appearance="outline" style="color: white;border: 1px solid red;height: 40px;">
-        <input matInput placeholder="Placeholder" [matMenuTriggerFor]="menu" style="margin-bottom: 5px;">
-        <mat-icon matSuffix style="color: white;font-size: 23px;">search</mat-icon>
-      </mat-form-field>
-     
-      <mat-menu #menu="matMenu" class="matmenuSearch" >
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-      </mat-menu>
+<body class="main-container">
+  <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxLayoutAlign="center center">
+      <!-- <h1 style="color: white; font-size: 3rem">kiki</h1> -->
+      <img src="../../../../assets/kikilogo.PNG" alt="">
     </div>
-    
+    <div class="center-btn-container">
+      <div fxLayoutAlign="center" fxLayoutGap="20">
+        <a class="centerNavBtn" mat-raised-button
+          ><mat-icon>videocam</mat-icon> Video</a
+        >
+        <a class="centerNavBtn" mat-raised-button
+          ><mat-icon>audiotrack</mat-icon> Audio</a
+        >
+        <a class="centerNavBtn" mat-raised-button
+          ><mat-icon>dashboard</mat-icon> More</a
+        >
+      </div>
+    </div>
 
-    <a class="rightNavBtn" mat-raised-button color="primary">Primary</a>
-  </div>
+    <div fxLayoutAlign="space-between" fxLayoutGap="20">
+      <div fxLayoutAlign="center" >
+        <div>
+          <mat-form-field
+            appearance="outline"
+            style="color: white; font-size: 15px"
+          >
+            <input matInput [matMenuTriggerFor]="menu" />
+            <mat-icon matSuffix style="color: white; font-size: 23px"
+              >search</mat-icon
+            >
+          </mat-form-field>
+          <mat-menu #menu="matMenu" class="matmenuSearch">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </div>
+      </div>
+      <div fxLayoutAlign="center center">
+        <a class="rightNavBtn" mat-raised-button color="primary">Sign In</a>
+      </div>
+    </div>
+  </mat-toolbar>
 
-</mat-toolbar>
+  <main class="bodyContainer" fxLayout="row">
+    <!-- <img src="../../../../assets/mainpic.jpg" alt="" > -->
+    <app-slider></app-slider>
+  </main>
+</body>
