@@ -1,21 +1,30 @@
 <div class="mainSliderContainer">
-    <div class="slider" style="background-color: black;">
-        <div >
-          <div (click)="goToPrevious()" class="leftArrow" style="background-color: transparent;">❰</div>
-          <div (click)="goToNext()" class="rightArrow">❱</div>
-        </div>
+  <div class="slider" style="background-color: black">
+    <div>
+      <div (click)="goToPrevious()" class="leftArrow" style="color: transparent;">❰</div>
+      <div (click)="goToNext()" class="rightArrow" style="color: transparent;">❱</div>
+    </div>
+    <div
+      style="height: 100%"
+      fxLayout="row"
+      fxLayoutAlign="space-between"
+    >
+      <div class="textAriaContainer"></div>
+      <div style="background-color: black; width: 70%; height: 100%">
         <div
-          class="slide"
-          [ngStyle]="{ 'background-image': getCurrentSlideUrl() }"
+          class="slide image-blurred-edge"
+          [ngStyle]="{'background': 'linear-gradient(to left, rgba(255, 255, 255, 0) 0,  rgba(16,11,7,1.00) 98%, rgba(16,11,7,1.00) 290px), url(/assets/BlackAdamCover.png)'}"
         ></div>
-        <div class="dotsContainer">
-          <div
-            *ngFor="let slide of slides; let slideIndex = index"
-            class="dot"
-            (click)="goToSlide(slideIndex)"
-          >
-            ●
-          </div>
-        </div>
       </div>
+    </div>
+    <div class="dotsContainer" >
+      <div
+        *ngFor="let slide of slides; let slideIndex = index"
+        class="dot"
+        (click)="goToSlide(slideIndex)"
+      >
+        ●
+      </div>
+    </div>
+  </div>
 </div>

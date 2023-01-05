@@ -80,6 +80,29 @@ mat-icon {
 // ----------------------main Container----------------------
 
 .bodyContainer{
-  height: 75vh;
-  border: 1px solid red;
+  height: 76vh;
+  // border: 1px solid red;
+ background-color: black;
 }
+
+.footerContainer{
+  // border: 1px solid red;
+  width: 90%;
+  height: 7vh;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 25%;
+}
+
+.footerBtn{
+  border-radius: 25px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+}
+
+.footerBtn:hover{ 
+  border: 1px solid #0099a5;
+}
+

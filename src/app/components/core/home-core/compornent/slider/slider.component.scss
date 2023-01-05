@@ -1,61 +1,71 @@
 .slide {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .rightArrow {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 32px;
-    font-size: 45px;
-    color: #fff;
-    z-index: 1;
-    cursor: pointer;
-  }
-  
-  .leftArrow {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    left: 32px;
-    font-size: 45px;
-    color: #fff;
-    z-index: 1;
-    cursor: pointer;
-  }
-  
-  .slider {
-    position: relative;
-    height: 100%;
-    width: 70vw;
-    margin: auto;
-    left: 15.1%;
-    // border-radius: none;
+  width: 100%;
+  height: 100%;
+  // border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
 
-  }
-  
-  .dotsContainer {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .dot {
-    margin: 0 3px;
-    cursor: pointer;
-    font-size: 20px;
-  }
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+  margin: auto;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 20px;
+}
 
 
 
 //   -------------slider container--------------
-.mainSliderContainer{
-    margin: auto;
-    height: 100%;
-    width: 99.7vw;
-    // border: 1px solid green;
-    background-color: #0c0c07;
+.mainSliderContainer {
+  margin: auto;
+  height: 100%;
+  width: 99.8vw;
+  // border: 1px solid green;
+  background-color: #000000;
+
+}
+
+.image-blurred-edge {
+  box-shadow: 10px 0 8px rgb(11,7,4) inset;
+}
+
+.textAriaContainer {
+  background-color: rgb(199, 25, 25);
+  width: 30%;
+  height: 100%;
+
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0,  rgba(0, 0, 0, 1) 240px,
+  rgba(11,7,4,1.00) 290px), url(https://i.stack.imgur.com/AF4np.jpg);
 }
