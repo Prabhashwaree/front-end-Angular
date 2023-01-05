@@ -12,6 +12,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import { SliderComponent } from './home-core/compornent/slider/slider.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { SliderComponent } from './home-core/compornent/slider/slider.component'
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ],
   declarations: [HomeCoreComponent,SliderComponent]
 })

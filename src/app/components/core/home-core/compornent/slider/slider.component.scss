@@ -1,11 +1,8 @@
 .slide {
   width: 100%;
   height: 100%;
-  // border-radius: 10px;
   background-size: cover;
-  background-position: center;
 }
-
 .rightArrow {
   position: absolute;
   top: 50%;
@@ -62,10 +59,37 @@
 }
 
 .textAriaContainer {
-  background-color: rgb(199, 25, 25);
+  background-color: rgb(0, 0, 0);
   width: 30%;
   height: 100%;
+}
+.textSection{
+  width: 45%;
+  height: 50%;
+  // border: 1px solid red;
+  position: absolute;
+  top: 28%;
+  left: 8%;
+}
 
-  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0,  rgba(0, 0, 0, 1) 240px,
-  rgba(11,7,4,1.00) 290px), url(https://i.stack.imgur.com/AF4np.jpg);
+.startIcon mat-icon{
+  color: #0099a5;
+  font-size: 15px;
+}
+
+.startIcon p{
+  color: white;
+  margin-top: 2px;
+  font-size: 11px;
+  
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.demo-section + .demo-section {
+  margin-top: 16px;
 }

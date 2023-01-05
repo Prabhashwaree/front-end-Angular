@@ -20,6 +20,12 @@ export interface SlideInterface {
 })
 export class SliderComponent implements OnInit, OnDestroy {
   constructor() { }
+  
+  hidden = false;
+
+  toggleBadgeVisibility() {
+    this.hidden = !this.hidden;
+  }
 
   @Input() slides: SlideInterface[] = [
     { url: '/assets/BlackAdamCover.png', title: 'beach' },
