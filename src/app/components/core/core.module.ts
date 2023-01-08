@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import { SliderComponent } from './home-core/compornent/slider/slider.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import { NavbarComponent } from './home-core/compornent/navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,6 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatMenuModule,
     MatBadgeModule
   ],
-  declarations: [HomeCoreComponent,SliderComponent]
+  declarations: [HomeCoreComponent,SliderComponent,NavbarComponent]
 })
 export class CoreModule { }

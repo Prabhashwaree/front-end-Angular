@@ -1,0 +1,79 @@
+.main-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  mat-toolbar {
+    background-color: #000000;
+    height: 10%;
+  }
+  
+  .sub-tool-bar {
+    width: 100%;
+    background-color: red;
+  }
+  
+  .centerNavBtn {
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid #0099a5;
+    color: white;
+  }
+  
+  mat-icon {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #0099a5;
+    margin: 0;
+  }
+  
+  .rightNavBtn {
+    background-color: #0099a5;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  
+  .centerNavBtn:hover {
+    background-color: #0099a5;
+    color: white;
+  }
+  
+  .centerNavBtn:hover .mat-icon {
+    color: white;
+  }
+  
+  .center-btn-container{
+    position: absolute;margin: auto;left: 0;right: 0;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #0099a5 !important;
+    border-radius: 1000px;
+  }
+  
+  ::ng-deep .mat-form-field-outline-start {
+    border-radius: 28px 0 0 28px !important;
+    min-width: 28px !important;
+  }
+  
+  ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 28px 28px 0 !important;
+  }
+  
+  ::ng-deep.mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    height: 40px !important;
+  }
+  
+  ::ng-deep .mat-form-field-infix {
+    padding-top: 0 !important;
+  }
+  
+  ::ng-deep .mat-form-field-suffix{
+    margin-top: 5px;
+  }
+  
+  
