@@ -1,4 +1,4 @@
-import { Component, OnInit , Input, OnDestroy} from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import {
   interval,
   Observable,
@@ -7,10 +7,16 @@ import {
   switchMap,
   timer,
 } from 'rxjs';
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { SliderService } from 'src/app/service/slider.service';
 
 export interface SlideInterface {
-  url: string;
+  backgroundImage: string;
+  description: string;
+  genre: string;
+  genreStatus: string;
+  mainButton: string;
+  subButton: string;
   title: string;
 }
 @Component({
@@ -19,27 +25,55 @@ export interface SlideInterface {
   styleUrls: ['./slider.component.scss'],
 })
 export class SliderComponent implements OnInit, OnDestroy {
-  constructor() { }
-  
+  title!: string;
+  description!: string;
+  genre!: string;
+  genreStatus!: string;
+  mainButton!: string;
+  subButton!: string;
+
+  buttonColor!:string;
+  statusColor!:string;
+
+  constructor(
+    private sliderService: SliderService,
+    private router: Router,
+    private activateRoute: ActivatedRoute
+  ) {}
+
   hidden = false;
 
   toggleBadgeVisibility() {
     this.hidden = !this.hidden;
   }
 
-  @Input() slides: SlideInterface[] = [
-    { url: '/assets/BlackAdamCover.png', title: 'beach' },
-    { url: '/assets/TheWalkingDeadCover.png', title: 'boat' },
-    { url: '/assets/LiveStreamingThumbnail.png', title: 'forest' },
-    
-  ];
+  @Input() slides: SlideInterface[] = [];
 
   currentIndex: number = 0;
   timeoutId?: number;
 
   ngOnInit(): void {
+    this.loadSliderData();
     this.resetTimer();
   }
+
+  loadSliderData() {
+    const resp = this.sliderService.getAllSliders();
+
+    resp.subscribe((data: any) => {
+      data.data.map((slide: SlideInterface) => {
+        console.log(slide);
+        this.slides.push(slide);
+        this.title = slide.title;
+        this.description=slide.description;
+        this.genre=slide.genre;
+        this.genreStatus=slide.genreStatus;
+        this.mainButton=slide.mainButton;
+        this.subButton=slide.subButton;
+      });
+    });
+  }
+
   ngOnDestroy() {
     window.clearTimeout(this.timeoutId);
   }
@@ -58,6 +92,14 @@ export class SliderComponent implements OnInit, OnDestroy {
 
     this.resetTimer();
     this.currentIndex = newIndex;
+
+    if(this.slides[this.currentIndex].genreStatus=="Live"){
+      this.buttonColor=this.statusColor="background-color:red";
+     
+  }else{
+    this.buttonColor="background-color:#0099a5";
+    this.statusColor="background-color:grey";
+  }
   }
 
   goToNext(): void {
@@ -66,6 +108,21 @@ export class SliderComponent implements OnInit, OnDestroy {
 
     this.resetTimer();
     this.currentIndex = newIndex;
+
+    this.title = this.slides[this.currentIndex].title;
+    this.description = this.slides[this.currentIndex].description;
+    this.genre=this.slides[this.currentIndex].genre;
+    this.genreStatus=this.slides[this.currentIndex].genreStatus;
+    this.mainButton=this.slides[this.currentIndex].mainButton;
+    this.subButton=this.slides[this.currentIndex].subButton;
+
+    if(this.slides[this.currentIndex].genreStatus=="Live"){
+        this.buttonColor=this.statusColor="background-color:red";
+       
+    }else{
+      this.buttonColor="background-color:#0099a5";
+      this.statusColor="background-color:grey";
+    }
   }
 
   goToSlide(slideIndex: number): void {
@@ -74,9 +131,6 @@ export class SliderComponent implements OnInit, OnDestroy {
   }
 
   getCurrentSlideUrl() {
-    return `url('${this.slides[this.currentIndex].url}')`;
+    return `url('${this.slides[this.currentIndex].backgroundImage}')`;
   }
-
-  
-
 }

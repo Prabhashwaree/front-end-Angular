@@ -6,11 +6,11 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class SliderService {
-  baseURL = environment.sliderUrl;
+  baseURL = environment.sliderURL;
 
 constructor(private http:HttpClient) { }
  
-public getAllParentMenu() {
+public getAllSliders() {
   return this.http.get(this.baseURL + '/Mobile');
 }
 

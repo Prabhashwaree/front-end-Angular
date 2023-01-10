@@ -1,7 +1,30 @@
 .slide {
+  position: relative;
   width: 100%;
   height: 100%;
   background-size: cover;
+  animation-name: photoSlider;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes photoSlider {
+  from {
+    right: 5%;
+    position: relative;
+  }
+  to {
+    right: 0;
+    opacity: 0;
+    filter: drop-shadow(1px 1px 10px rgb(1, 1, 1)); 
+    width: 100%;
+    animation-duration: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+  }
 }
 .rightArrow {
   position: absolute;
@@ -63,15 +86,31 @@
   width: 30%;
   height: 100%;
 }
-.textSection{
+.textSection {
   width: 45%;
   height: 50%;
-  // border: 1px solid red;
   position: absolute;
   top: 28%;
   left: 8%;
+  animation-name: textSlider;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
+@keyframes textSlider {
+  from {
+    left: 10%;
+    z-index: 3;
+  }
+  to {
+    left: 0%;
+    opacity: 0;
+    filter: drop-shadow(10px 10px 10px rgb(1, 4, 32)); 
+    z-index: 3;  
+  }
+}
 .startIcon mat-icon{
   color: #0099a5;
   font-size: 15px;

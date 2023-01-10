@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SliderService } from 'src/app/service/slider.service';
 
 @Component({
   selector: 'app-home-core',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeCoreComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sliderService:SliderService) { }
 
   ngOnInit() {
+    
   }
+
 
 }

@@ -4,19 +4,19 @@
       <div
         (click)="goToPrevious()"
         class="leftArrow"
-        style="color: transparent"
+        style="color: white"
       >
         ❰
       </div>
-      <div (click)="goToNext()" class="rightArrow" style="color: transparent">
+      <div (click)="goToNext()" class="rightArrow" style="color: white">
         ❱
       </div>
     </div>
     <div style="height: 100%" fxLayout="row" >
       <div class="textAriaContainer">
         <div class="textSection">
-          <div fxLayout="column" fxLayoutGap="20" style="position: relative;top: 15px;">
-            <p style="color: white; font-size: 30px">Black Adam</p>
+          <div fxLayout="column" fxLayoutGap="20" style="position: relative;top: 15px;z-index: 1;">
+            <p style="color: white; font-size: 30px">{{title}}</p>
             <div
               class="startIcon"
               fxLayout="row"
@@ -29,8 +29,7 @@
                 ><mat-icon>star</mat-icon><mat-icon>star</mat-icon
                 ><mat-icon>star_border</mat-icon>
               </div>
-              <p  fxLayoutAlign="center">Action / Adventure -</p>
-              <p  fxLayoutAlign="center">2h 5min -2022</p>
+              <p  fxLayoutAlign="center">{{genre}}</p>
               <div
                 style="
                   color: white;
@@ -44,9 +43,11 @@
                   bottom: 5px;margin-left: 10px;
                   cursor: pointer;
                 "
-                class="demo-section"   
+                class="demo-section" 
+
+                [style]="statusColor"  
               >
-                New
+               {{genreStatus}}
               </div>
             </div>
 
@@ -54,11 +55,7 @@
               style="width: 100%; height: 55px;position: relative; top: -5px"
             >
               <p style="color: white; font-size: 0.8vw">
-                Nearly 5,000 years after he was bestowed with the almlighty
-                powers of the Egyptlan gods-and imprisoned just as<br />
-                quickly-Black Adam is freed from his earthly tomb, ready to
-                unleash his unique form of justice on the modern <br />
-                world
+             {{description}}
               </p>
             </div>
 
@@ -74,9 +71,9 @@
                   font-size: 13px;
                   margin-top: 2px;
                 "
+                [style]="buttonColor"
                 mat-raised-button
-                ><mat-icon style="color: white">play_arrow</mat-icon> Watch
-                Now</a
+                ><mat-icon  style="color: white">play_arrow</mat-icon> {{mainButton}}</a
               >
 
               <a
@@ -89,7 +86,7 @@
                   margin-left: 16px;
                 "
                 mat-raised-button
-                >Watch Trailler</a
+                >{{subButton}}</a
               >
             </div>
           </div>

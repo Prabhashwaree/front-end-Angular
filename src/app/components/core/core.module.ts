@@ -15,6 +15,7 @@ import { SliderComponent } from './home-core/compornent/slider/slider.component'
 import {MatBadgeModule} from '@angular/material/badge';
 import { NavbarComponent } from './home-core/compornent/navbar/navbar.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
