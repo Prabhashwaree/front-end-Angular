@@ -116,6 +116,20 @@
   font-size: 15px;
 }
 
+.title{
+  color: white;
+   font-size: 30px;
+}
+
+@media all and (max-width: 1024px) {
+  .title{
+    position: relative;
+    // background-color: blue;
+    top: 5px;
+  }
+}
+
+
 .startIcon p{
   color: white;
   margin-top: 2px;
@@ -132,3 +146,50 @@
 .demo-section + .demo-section {
   margin-top: 16px;
 }
+
+.discription{
+  width: 100%;
+  height: 55px;
+  position: relative;
+  top: -1vh;
+  // border: 1px solid red;
+}
+
+@media all and (max-width: 1024px) {
+  .discription {
+    position: relative;
+    // background-color: blue;
+    top: -3vh;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .discription {
+    position: relative;
+    // background-color: blue;
+    top: -4.4vh;
+  }
+}
+
+.btnSection{
+  width: 100%;
+   height: 55px;
+    position: relative; 
+    top: -40px;
+}
+
+@media all and (max-width: 1024px) {
+  .btnSection {
+    position: relative;
+    // background-color: blue;
+    top: -56px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .btnSection {
+    position: relative;
+    // background-color: blue;
+    top: -69px;
+  }
+}
+

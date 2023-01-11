@@ -75,5 +75,34 @@
   ::ng-deep .mat-form-field-suffix{
     margin-top: 5px;
   }
+
+  @media all and (max-width: 1024px) {
+    #search-field {
+      margin-right: 10px !important;
+    }
+  }
+  
+  @media all and (max-width: 768px) {
+    #center-nav-btn {
+      position: relative;
+      right: 120px;
+    }
+    .centerNavBtn {
+      margin-right: 8px !important;
+    }
+  }
+
+  @media all and (max-width: 820px) {
+    #center-nav-btn {
+      position: relative;
+      right: 120px;
+    }
+  }
+  @media all and (max-width: 912px) {
+    #center-nav-btn {
+      position: relative;
+      right: 120px;
+    }
+  }
   
   

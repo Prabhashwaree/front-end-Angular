@@ -4,11 +4,11 @@
       <div
         (click)="goToPrevious()"
         class="leftArrow"
-        style="color: white"
+        style="color: transparent"
       >
         ❰
       </div>
-      <div (click)="goToNext()" class="rightArrow" style="color: white">
+      <div (click)="goToNext()" class="rightArrow" style="color: transparent">
         ❱
       </div>
     </div>
@@ -16,7 +16,7 @@
       <div class="textAriaContainer">
         <div class="textSection">
           <div fxLayout="column" fxLayoutGap="20" style="position: relative;top: 15px;z-index: 1;">
-            <p style="color: white; font-size: 30px">{{title}}</p>
+            <p class="title">{{title}}</p>
             <div
               class="startIcon"
               fxLayout="row"
@@ -51,16 +51,14 @@
               </div>
             </div>
 
-            <div
-              style="width: 100%; height: 55px;position: relative; top: -5px"
+            <div class="discription"
             >
               <p style="color: white; font-size: 0.8vw">
              {{description}}
               </p>
             </div>
 
-            <div
-              style="width: 100%; height: 55px; position: relative; top: -23px"
+            <div class="btnSection"
             >
               <a
                 style="

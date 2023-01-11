@@ -3,34 +3,53 @@
   height: 100vh;
 }
 
-
 // ----------------------main Container----------------------
 
-.bodyContainer{
+.bodyContainer {
   height: 76vh;
   // border: 1px solid red;
- background-color: black;
+  background-color: black;
 }
 
-.footerContainer{
+.footerContainer {
   // border: 1px solid red;
-  width: 90%;
-  height: 7vh;
+  width: 1200px;
   text-align: center;
   margin: auto;
   position: relative;
   top: 25%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+
 }
 
-.footerBtn{
+.footerBtn {
+  margin-top: 5px;
   border-radius: 25px;
   background-color: transparent;
   border: 1px solid #ffffff;
   color: white;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.footerBtn:hover{ 
+.footerBtn:hover {
   border: 1px solid #0099a5;
 }
 
+.footer-main {
+  width: 100%;
+  height: 14vh;
+  background-color: black;
+  overflow-x: scroll;
+}
+
+@media all and (min-width: 320px) and (max-width: 425px) {
+  .footer-main {
+    overflow-x: scroll;
+  }
+  .footerContainer {
+    flex-flow: nowrap !important
+  }
+  
+}
